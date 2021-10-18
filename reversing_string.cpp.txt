@@ -1,0 +1,54 @@
+//Initial Template for C++
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+string reverseWord(string str);
+
+    
+int main() {
+	
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	string s;
+	cin >> s;
+	
+	cout << reverseWord(s) << endl;
+	}
+	return 0;
+	
+}
+
+// } Driver Code Ends
+
+
+//User function Template for C++
+
+string reverseWord(string str){
+    
+  //Your code here
+  
+  int i=0, j=0;
+  char temp;
+  string str1 = str;
+  
+  while(str[i]!='\0')
+  {
+      i++;
+  }
+  i--;
+  
+  while(i>=0)
+  {
+      str1[j]=str[i];
+      i--;
+      j++;
+  }
+  
+  cout<<str1;
+  
+}

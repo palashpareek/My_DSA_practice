@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include<limits.h>
+    
+struct pair {
+    int min;
+    int max;
+}pair = {INT_MIN, INT_MAX};
+
+int main() {
+	//code
+	
+	int arr[10];
+	int i=0;
+	
+	for(i=0;i<10;i++)
+	{
+	    scanf("%d",&arr[i]);
+	}
+	
+	for(i=0;i<10;i++)
+	{
+	    if(arr[i]>pair.min)
+	    {
+	        pair.min = arr[i];
+	        
+	        if(arr[i]<pair.max)
+	        {
+	            pair.max=arr[i];
+	        }
+	    }
+	    else if(arr[i]<pair.max)
+	    {
+	        pair.max=arr[i];
+	    }
+	}
+	
+	printf("%d", pair.min);
+	printf("\n");
+	printf("%d", pair.max);
+	return 0;
+}
